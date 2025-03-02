@@ -14,6 +14,7 @@ interface Project {
   };
   link: string;
   description: string;
+  tags: string[];
 }
 
 // Optional: Generate static paths for SSG
@@ -75,7 +76,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             >
               Visit Project
             </Link>
-            {project.tags.map((tag:string[] ,_id:number)=>(
+            {project.tags.map((tag ,_id:number)=>(
               <span key={_id} className="bg-gray-200 text-gray-800 px-2 py-1 rounded ml-2">{tag}</span>
             ))}
 
