@@ -27,9 +27,8 @@ export async function generateStaticParams() {
 }
 
 interface ProjectPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
-
 export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = params;
   const query = `*[_type == "project" && slug.current == $slug][0]{
