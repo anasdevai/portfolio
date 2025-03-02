@@ -91,7 +91,7 @@ export default function AboutMe() {
               When I encounter a new problem, I usually conduct extensive
               research on it in order to comprehend it and discover cutting-edge
               and innovative approaches for dealing with similar problems in the
-              future. As a result, it's not unexpected that I've listed a lot of
+              future. As a result, it's not unexpected that.I've listed a lot of
               abilities here:
             </p>
           </section>

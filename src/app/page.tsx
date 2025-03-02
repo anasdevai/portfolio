@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import HomeComponent from "./component/HomeComponent/HomeComponent";
-import { Slider } from "./component/SliderCard/slider";
+import { Slider } from "./projects/page";
 import Aboutus from "./component/AboutUs/Aboutus";
 
 
@@ -28,7 +27,7 @@ export default function Home() {
           </p>
          </div>
       </div>
-      <div>
+      <div className="mb-32">
         <Slider/>
       </div>
     </div>
