@@ -52,13 +52,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 mt-20">
       <div className="bg-white shadow-md rounded-lg p-6">
-        <h1 className="text-4xl font-bold my-4">{project.title}</h1>
-      <div className="py-[40px]">
+        <h1 className="text-7xl text-[#1b939c] italic font-bold ">{project.title}</h1>
+      <div className="py-[40px] ">
       {project.video && project.video.asset && (
           <div className="mb-6">
-            <video controls className="w-full rounded-md shadow-lg">
+            <video controls className="w-full rounded-md shadow-lg ">
               <source src={project.video.asset.url} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -71,7 +71,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+              className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition mb-8"
             >
               Visit Project
             </Link>

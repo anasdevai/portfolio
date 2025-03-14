@@ -2,10 +2,8 @@
 import React from 'react'
 import Image from 'next/image'
 import Typewriter from 'typewriter-effect';
-import picts from '../../../../assets/portfolio.png'
-import Boy from '../../../../assets/portfolio.png'
+import Boy from '../../../../assets/boy (2).png'
 
-import Next from '../../../../assets/nextjs.png'
 import mongodb from '../../../../assets/mongodb.png'
 import docker from '../../../../assets/docker.png'
 import Slider from 'react-slick';
@@ -15,7 +13,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 export default function HomeComponent() {
     
-    var settings = {
+    const settings = {
         infinite: true,
         slidesToShow: 6,
         slidesToScroll: 1,
@@ -115,7 +113,7 @@ export default function HomeComponent() {
                     <div className='lg:pl-24 sm:pl-10 pl-0 py-20 md:py-0 md:text-start text-center'>
                         <p className={`text-[#47AEDE] text-3xl md:text-base lg:text-2xl`}>Hi, There</p>
                         <h1 className='text-[black] font-recoletaBlack text-5xl md:text-5xl lg:text-7xl xl:text-7xl mt-5 
-                        md:mt-3  font-bold'>I'm M.Anas </h1>
+                        md:mt-3  font-bold'>I 'm M.Anas </h1>
                         <div className='text-xl font-semibold'>
                         <Typewriter
   options={{

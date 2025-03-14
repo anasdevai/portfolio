@@ -5,6 +5,7 @@ import Header from "./component/Header/Header";
 import Footer from "./component/Footer/footer";
 
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,14 +19,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body      
-      className={inter.className} >
-        <Header/>
-        {children}
-        <Footer/>
-        </body>
-      
-    </html>
+    <html lang="en" suppressHydrationWarning>
+    <body suppressHydrationWarning className={inter.className}>
+      <Header />
+          {children}
+       
+      <Footer />
+    </body>
+  </html>
+  
   );
 }

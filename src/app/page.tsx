@@ -3,37 +3,44 @@ import HomeComponent from "./component/HomeComponent/HomeComponent";
 import { Slider } from "./projects/page";
 import Aboutus from "./component/AboutUs/Aboutus";
 
-
 export default function Home() {
   return (
-   <main className="min:h-screen relative">
-    <HomeComponent/>
-    <div id="portfolio" 
-    className="mt-0 pt-5 -mb-40"
-    style={{backgroundImage: "linear-gradient(-62deg , #EEF7FB 0 45%, white 0% 100%)",
-      width: "100%"
-    }}>
-      <div className="container m-auto">
-        <p className="text-[300px] text-[#ececec]  md:pl-[50px] px-5 max-w-[750px] w-[100px] font-bold "
+    <main className="min-h-screen relative">
+      <HomeComponent />
+      <div
+        id="portfolio"
+        className="pt-5 pb-20"
         style={{
-          transform:"translate(0px, 20px)"}}>Portfolio</p>
-         <div style={{ transform: "translate(0px , -250px)"}}>
-         <p className="text-[#16b7cc] md:pl-[80px] px-5 font-extrabold text-5xl">Recent Works</p>
-          <p className={`max-w-2xl md:pl-[80px] px-5 text-[16px] text-[#47626D] leading-8 mt-5`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus accusantium est fugiat eligendi ad officiis ullam repudianda
-            e, corrupti mollitia sunt distinctio
-             neque animi? Veniam voluptatem, quidem nisi
-              libero atque accusantium?
+          backgroundImage:
+            "linear-gradient(-62deg, #EEF7FB 0%, white 45%, white 100%)",
+          width: "100%",
+        }}
+      >
+        <div className="container mx-auto px-4 lg:px-8 xl:px-16">
+          {/* Portfolio title enlarged on larger screens */}
+          <p
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[12rem] 2xl:text-[14rem] text-[#ececec] font-bold max-w-4xl w-full"
+            style={{ transform: "translateY(20px)" }}
+          >
+            Portfolio
           </p>
-         </div>
+          <div className="mt-10" style={{ transform: "translateY(-100px)" }}>
+            <p className="text-[#16b7cc] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
+              Recent Works
+            </p>
+            <p className="max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl text-[#47626D] leading-8 mt-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus accusantium est fugiat eligendi ad officiis ullam
+              repudiandae, corrupti mollitia sunt distinctio neque animi? Veniam
+              voluptatem, quidem nisi libero atque accusantium?
+            </p>
+          </div>
+        </div>
+        <div className="mb-32 mt-10">
+          <Slider />
+        </div>
       </div>
-      <div className="mb-32">
-        <Slider/>
-      </div>
-    </div>
-    <Aboutus/>
-    
+      <Aboutus />
     </main>
-  
   );
 }

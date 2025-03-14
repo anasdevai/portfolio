@@ -33,7 +33,8 @@ export const  AboutData = [
       "PostgreSQL",
       "Nextjs",
       "REST API ",
-      "Api handling"
+      "Api handling",
+      "python"
     ],
   },
   {
@@ -41,10 +42,7 @@ export const  AboutData = [
     title: "DevOps & Administration",
     img: "https://img.icons8.com/color/96/000000/cloud.png",
     array: [
-      "Docker / CI CD",
-      "Apache / Nginx",
-      "CentOS / Ubuntu",
-      "Cloud Deployment (Vercel, Netlify, AWS)",
+      "Cloud Deployment (Vercel, Netlify)",
       "Security Best Practices"
     ],
   },
@@ -68,7 +66,7 @@ export const  AboutData = [
       "Bash / PowerShell",
       "NPM / Yarn",
       "Postman",
-      "JIRA"
+      "Google colab",
     ],
   },
   
