@@ -39,13 +39,16 @@ export const  AboutData = [
   },
   {
     count: 4,
-    title: "DevOps & Administration",
-    img: "https://img.icons8.com/color/96/000000/cloud.png",
+    title: "Authentication",
+    img: "https://img.icons8.com/color/96/000000/lock-2.png",
     array: [
-      "Cloud Deployment (Vercel, Netlify)",
-      "Security Best Practices"
-    ],
-  },
+      "NextAuth.js",
+      "Clerk Authentication",
+      "OAuth Integration",
+      "JWT Authentication"
+    ]
+  }
+  ,
   {
     count: 5,
     title: "CMS & Headless CMS",

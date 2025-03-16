@@ -49,7 +49,7 @@ export default function AboutMe() {
   return (
     <React.Fragment>
       <div
-        id="about-me-component"
+        id="About"
         className="bg-[#E0F3FD] pt-[250px] mt-4 pb-[100px] lg:pb-[600px] relative lg:h-[800px]"
       >
         <div className="container m-auto">
@@ -64,7 +64,7 @@ export default function AboutMe() {
           </h4>
           <section className="relative flex flex-col lg:flex-row px-5 md:px-24">
             <p className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5 lg:mr-4 font-[200] ${hind.className}`}>
-              My name is Ehizeex. A professional and enthusiastic full-stack developer and designer.
+              My name is Muhammad Anas. A professional and enthusiastic full-stack developer and designer.
               However, I am more than just your average programmer or designer. I've been running my own
               business for the past 7 years and I was continually coming up with new concepts. I'm very fluid
               and never stop learning and adapting to new situations.

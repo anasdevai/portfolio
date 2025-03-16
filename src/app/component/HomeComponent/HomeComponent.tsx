@@ -6,6 +6,27 @@ import Boy from '../../../../assets/boy (2).png'
 
 import mongodb from '../../../../assets/mongodb.png'
 import docker from '../../../../assets/docker.png'
+import nextjs from '../../../../assets/19.png'
+import htmls from '../../../../assets/2-removebg-preview.png'
+import streamlit from '../../../../assets/9-removebg-preview.png'
+import numpy from '../../../../assets/10-removebg-preview.png'
+import reacts from '../../../../assets/reacts.png'
+import clerk from '../../../../assets/clerk.png'
+import prisma from '../../../../assets/12.png'
+import sql from '../../../../assets/6.png'
+import python from '../../../../assets/7-removebg-preview.png'
+import reduxs from '../../../../assets/redux-removebg-preview.png'
+import stripe from '../../../../assets/13-removebg-preview.png'
+
+
+
+
+
+
+
+
+
+
 import Slider from 'react-slick';
 import  'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -126,9 +147,17 @@ export default function HomeComponent() {
                         <a  href='#portfolio' className={`inline-block bg-[#47AEDE] transition-all duration-300 ease-in-out rounded-md 
                            px-3 text-white font-bold py-1  mt-8 uppercase md:py-2 lg:py-2 lg:px-6 md:text-xs lg:text-base md:mt-5 xl:mt-10
                            hover:bg-[#223740] hover:shadow-lg hover:translate-y-1`}>Projects</a>
-                            <a className={`inline-block bg-[#47AEDE] transition-all duration-300 ease-in-out rounded-md 
-                           px-3 text-white font-bold py-1  mt-8 uppercase md:py-2 lg:py-2 lg:px-6 md:text-xs lg:text-base md:mt-5 xl:mt-10
-                           hover:bg-[#223740] hover:shadow-lg hover:translate-y-1 ml-10 cursor-pointer`}>Resume</a>
+                           <a 
+  href="/assets/ehizcv.pdf" 
+  download
+  className="inline-block bg-[#47AEDE] transition-all duration-300 ease-in-out rounded-md 
+             px-3 text-white font-bold py-1 mt-8 uppercase md:py-2 lg:py-2 lg:px-6 
+             md:text-xs lg:text-base md:mt-5 xl:mt-10 hover:bg-[#223740] 
+             hover:shadow-lg hover:translate-y-1 ml-10 cursor-pointer"
+>
+  Resume
+</a>
+
                     </div>
                 </div>
             </div>
@@ -150,10 +179,25 @@ export default function HomeComponent() {
                         <Slider {...settings}>
                         <Image src={mongodb} alt='slider1' height={40}></Image>
                         <Image src={docker} alt='slider1' height={40}></Image>
-                        <Image src={docker} alt='slider1' ></Image>
                         <Image src={mongodb} alt='slider1' height={40}></Image>
-                        <Image src={mongodb} alt='slider1' height={40}></Image>
-                        <Image src={docker} alt='slider1' ></Image>
+                        <Image src={docker} alt='slider1' height={40} ></Image>
+                        <Image src={nextjs} alt='slider1' className='h-16' ></Image>
+                        <Image src={htmls} alt='slider1' className='h-16 object-contain' ></Image>
+                        <Image src={streamlit} alt='slider1' className='h-16 object-contain' ></Image>
+                        <Image src={numpy} alt='slider1' className='h-16 object-contain' ></Image>
+                        <Image src={reacts} alt='slider1' className='h-16 object-contain' ></Image>
+                        <Image src={clerk} alt='slider1' className='h-16 object-contain' ></Image>
+                        <Image src={prisma} alt='slider1' className='h-16 object-contain' ></Image>
+                        <Image src={sql} alt='slider1' className='h-16 object-contain' ></Image>
+                        <Image src={python} alt='slider1' className='h-16 object-contain' ></Image>
+                        <Image src={reduxs} alt='slider1' className='h-16 object-contain' ></Image>
+                        <Image src={stripe} alt='slider1' className='h-16 object-contain' ></Image>
+
+
+
+
+
+
 
                     
                         </Slider>
