@@ -17,7 +17,7 @@ interface Project {
   tags: string[];
 }
 
-// Optional: Generate static paths for SSG
+// Generate static paths for SSG
 export async function generateStaticParams() {
   const query = `*[_type == "project"]{ 'slug': slug.current }`;
   const projects: { slug: string }[] = await client.fetch(query);
@@ -27,10 +27,12 @@ export async function generateStaticParams() {
 }
 
 interface ProjectPageProps {
-  params: Promise<{ slug: string }>;
+  params: { slug: string }; // Changed: no union with Promise
 }
+
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { slug } = params;
+  // Awaiting params is safe even if it's not a promise
+  const { slug } = await params;
   const query = `*[_type == "project" && slug.current == $slug][0]{
     _id,
     title,
@@ -54,17 +56,17 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="container mx-auto px-4 py-8 mt-20">
       <div className="bg-white shadow-md rounded-lg p-6">
-        <h1 className="text-7xl text-[#1b939c] italic font-bold ">{project.title}</h1>
-      <div className="py-[40px] ">
-      {project.video && project.video.asset && (
-          <div className="mb-6">
-            <video controls className="w-full rounded-md shadow-lg ">
-              <source src={project.video.asset.url} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        )}
-      </div>
+        <h1 className="text-7xl text-[#1b939c] italic font-bold">{project.title}</h1>
+        <div className="py-[40px]">
+          {project.video && project.video.asset && (
+            <div className="mb-6">
+              <video controls className="w-full rounded-md shadow-lg">
+                <source src={project.video.asset.url} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          )}
+        </div>
         {project.link && (
           <div className="mb-6">
             <Link
@@ -75,18 +77,22 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             >
               Visit Project
             </Link>
-            {project.tags.map((tag ,_id:number)=>(
-              <span key={_id} className="bg-gray-200 text-gray-800 px-2 py-1 rounded ml-2">{tag}</span>
+            {project.tags.map((tag, index) => (
+              <span
+                key={index}
+                className="bg-gray-200 text-gray-800 px-2 py-1 rounded ml-2"
+              >
+                {tag}
+              </span>
             ))}
-
           </div>
         )}
         <div className="w-[90%] font-normal">
-        {project.description && (
-          <div className="prose max-w-none">
-            {project.description}
-          </div>
-        )}
+          {project.description && (
+            <div className="prose max-w-none">
+              {project.description}
+            </div>
+          )}
         </div>
       </div>
     </div>

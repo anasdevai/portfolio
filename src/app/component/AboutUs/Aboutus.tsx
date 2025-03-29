@@ -1,9 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { Hind } from "next/font/google";
-import { AboutData } from "../../data";
 import Image from "next/image";
-
+import { AboutData } from "../../data";
 import "./aboutme.css";
 
 const hind = Hind({
@@ -11,19 +10,29 @@ const hind = Hind({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+// Define a type that matches the structure of your AboutData items.
+// Adjust the type properties as needed based on your actual data.
+type AboutDataType = {
+  title: string;
+  array: string[];
+  img: string;
+  count: number;
+};
+
 export default function AboutMe() {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isFaded, setIsFaded] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [mapData, setMapData] = useState(AboutData[0]);
+  const [mapData, setMapData] = useState<AboutDataType>(AboutData[0]);
 
-  const myFunctions = (data) => {
+  // Now we annotate the parameter 'data' with the type AboutDataType
+  const myFunctions = (data: AboutDataType) => {
     setIsFlipped(false);
     setIsFaded(false);
     setMapData(data);
   };
 
-  const handleCardClick = (data, index) => {
+  const handleCardClick = (data: AboutDataType, index: number) => {
     setIsFlipped(true);
     setIsFaded(true);
     setSelectedIndex(index);
