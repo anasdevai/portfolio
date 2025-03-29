@@ -1,7 +1,8 @@
 import React from "react";
 import HomeComponent from "./component/HomeComponent/HomeComponent";
-import { Slider } from "./projects/page";
+
 import Aboutus from "./component/AboutUs/Aboutus";
+import SlidersPage from "./projects/page";
 
 export default function Home() {
   return (
@@ -37,7 +38,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mb-32 mt-10">
-          <Slider />
+          <SlidersPage/>
         </div>
       </div>
       <Aboutus />
