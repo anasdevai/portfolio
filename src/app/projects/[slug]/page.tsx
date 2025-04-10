@@ -32,7 +32,7 @@ interface ProjectPageProps {
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
   // Awaiting params is safe even if it's not a promise
-  const { slug } = await params;
+  const { slug } =params;
   const query = `*[_type == "project" && slug.current == $slug][0]{
     _id,
     title,

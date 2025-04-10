@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Enable React Strict Mode to highlight potential problems
+  reactStrictMode: true,
+
+  // Enable SWC-based minification for faster builds and smaller bundles
+  swcMinify: true,
+
   images: {
     domains: [
       "img.freepik.com",
@@ -15,8 +21,15 @@ const nextConfig = {
       },
     ],
   },
+
+  // Continue ignoring ESLint warnings during production builds if desired
   eslint: {
     ignoreDuringBuilds: true,
+  },
+
+  // Optional: Useful for building standalone server output, which might help on Netlify or other platforms
+  experimental: {
+    outputStandalone: true,
   },
 };
 
