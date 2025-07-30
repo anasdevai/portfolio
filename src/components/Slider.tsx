@@ -19,6 +19,7 @@ interface Project {
       url: string;
     };
   };
+  link?: string;
 }
 
 export const Slider = () => {

@@ -3,21 +3,23 @@ const nextConfig = {
   // Enable React Strict Mode to highlight potential problems
   reactStrictMode: true,
 
-  // Enable SWC-based minification for faster builds and smaller bundles
-  swcMinify: true,
-
   images: {
-    domains: [
-      "img.freepik.com",
-      "img.icons8.com",
-      "source.unsplash.com",
-      "cdn.sanity.io"
-    ],
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "img.freepik.com",
+      },
+      {
+        protocol: "https",
         hostname: "img.icons8.com",
-        pathname: "/external-flaticons-lineal-color-flat-icons/**",
+      },
+      {
+        protocol: "https",
+        hostname: "source.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
       },
     ],
   },
@@ -27,10 +29,8 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
 
-  // Optional: Useful for building standalone server output, which might help on Netlify or other platforms
-  experimental: {
-    outputStandalone: true,
-  },
+  // Standalone output for deployment
+  output: 'standalone',
 };
 
 export default nextConfig;
