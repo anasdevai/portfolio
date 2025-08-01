@@ -4,9 +4,13 @@ import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
 
 export default function Header() {
-  const [select, setSelect] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // Function to handle link clicks and close sidebar
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +49,7 @@ export default function Header() {
             </li>
             <li className="grouped text-2xl relative mr-20 font-bold justify-between">
               <span></span>
-              <Link href="#About">Aboutus</Link>
+              <Link href="/#About">Aboutus</Link>
             </li>
           </ul>
         </nav>
@@ -63,41 +67,82 @@ export default function Header() {
       {/* Mobile Sidebar (only for mobile devices) */}
       {isOpen && (
         <div className="xl:hidden fixed inset-0 z-40">
-          <div
-            className="fixed left-0 top-0 h-full w-64 bg-white shadow-lg transition-transform duration-300 transform"
-            // No additional styling changes—just the sidebar container
-          >
-            <div className="p-4">
-              <h2 className="text-xl font-bold mb-4">Menu</h2>
-              <ul className="space-y-4">
-                <li>
-                  <Link href="/" onClick={() => setIsOpen(false)}>
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#portfolio" onClick={() => setIsOpen(false)}>
-                    Portfolio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/ContactUs" onClick={() => setIsOpen(false)}>
-                    Contact-Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#About" onClick={() => setIsOpen(false)}>
-                    Aboutus
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
           {/* Overlay to close sidebar */}
           <div
-            className="fixed inset-0 bg-black opacity-50"
+            className="fixed inset-0 bg-black bg-opacity-50"
             onClick={() => setIsOpen(false)}
           ></div>
+          
+          {/* Sidebar */}
+          <div
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-2xl z-50"
+          >
+            <div className="flex flex-col h-full">
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b border-gray-200">
+                <h2 className="text-2xl font-bold text-gray-800">Menu</h2>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+                >
+                  <FiX className="text-2xl text-gray-600" />
+                </button>
+              </div>
+              
+              {/* Navigation Links */}
+              <nav className="flex-1 p-6">
+                <ul className="space-y-6">
+                  <li>
+                    <Link 
+                      href="/" 
+                      onClick={handleLinkClick}
+                      className="flex items-center text-lg font-semibold text-gray-700 hover:text-[#145353f8] transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-gray-50 cursor-pointer w-full"
+                    >
+                      <span className="mr-3">🏠</span>
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/#portfolio" 
+                      onClick={handleLinkClick}
+                      className="flex items-center text-lg font-semibold text-gray-700 hover:text-[#145353f8] transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-gray-50 cursor-pointer w-full"
+                    >
+                      <span className="mr-3">💼</span>
+                      Portfolio
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/ContactUs" 
+                      onClick={handleLinkClick}
+                      className="flex items-center text-lg font-semibold text-gray-700 hover:text-[#145353f8] transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-gray-50 cursor-pointer w-full"
+                    >
+                      <span className="mr-3">📞</span>
+                      Contact Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="/#About" 
+                      onClick={handleLinkClick}
+                      className="flex items-center text-lg font-semibold text-gray-700 hover:text-[#145353f8] transition-colors duration-200 py-3 px-4 rounded-lg hover:bg-gray-50 cursor-pointer w-full"
+                    >
+                      <span className="mr-3">ℹ️</span>
+                      About Us
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+              
+              {/* Footer */}
+              <div className="p-6 border-t border-gray-200">
+                <div className="text-center text-sm text-gray-500">
+                  <p>© 2024 Portfolio</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </>

@@ -74,8 +74,8 @@ export default function AboutMe() {
           <section className="relative flex flex-col lg:flex-row px-5 md:px-24">
             <p className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5 lg:mr-4 font-[200] ${hind.className}`}>
               My name is Muhammad Anas. A professional and enthusiastic full-stack developer and designer.
-              However, I am more than just your average programmer or designer. I've been running my own
-              business for the past 7 years and I was continually coming up with new concepts. I'm very fluid
+              However, I am more than just your average programmer or designer. I&apos;ve been running my own
+              business for the past 7 years and I was continually coming up with new concepts. I&apos;m very fluid
               and never stop learning and adapting to new situations.
             </p>
             <p className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5 lg:mr-4 font-[200] ${hind.className}`}>
@@ -86,7 +86,7 @@ export default function AboutMe() {
             <p className={`w-full lg:w-1/3 text-[#223740] mr-0 mb-5 lg:mr-4 font-[200] ${hind.className}`}>
               When I encounter a new problem, I usually conduct extensive research on it in order to comprehend it
               and discover cutting-edge and innovative approaches for dealing with similar problems in the future.
-              As a result, it's not unexpected that I've listed a lot of abilities here:
+              As a result, it&apos;s not unexpected that I&apos;ve listed a lot of abilities here:
             </p>
           </section>
         </div>
